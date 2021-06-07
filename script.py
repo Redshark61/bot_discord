@@ -83,4 +83,4 @@ async def on_message(message):  # when a new message is detected in the server
             name="!debit", value="Envoie !debit pour rentrer une nouvelle dépense")
         await message.channel.send(embed=em)
 
-client.run("TOKEN")
+client.run(TOKEN)
