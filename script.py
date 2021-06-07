@@ -4,7 +4,8 @@ import _csv
 from dotenv import load_dotenv
 import os
 
-load_dotenv(dotenv_path="config")
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 print('up and runnig  ')
@@ -82,4 +83,4 @@ async def on_message(message):  # when a new message is detected in the server
             name="!debit", value="Envoie !debit pour rentrer une nouvelle dépense")
         await message.channel.send(embed=em)
 
-client.run(os.getenv("TOKEN"))
+client.run("TOKEN")
