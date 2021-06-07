@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv(dotenv_path="config")
-os.getenv("TOKEN")
 
 client = discord.Client()
 print('up and runnig  ')
@@ -83,4 +82,4 @@ async def on_message(message):  # when a new message is detected in the server
             name="!debit", value="Envoie !debit pour rentrer une nouvelle dépense")
         await message.channel.send(embed=em)
 
-client.run('ODUxMTEwNDYxMzQ0OTcyODIw.YLzgYg.x7M_6og1G84rkDGR9KbwmZHuFbA')
+client.run(os.getenv("TOKEN"))
